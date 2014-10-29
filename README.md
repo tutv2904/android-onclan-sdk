@@ -78,6 +78,7 @@ Add these keys to your plist file:
 # II. Using onClanSDK
 ## 1. Init SDK
 Init onClan SDK on onCreate function of Activity, for example:
+
         @Override
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);
