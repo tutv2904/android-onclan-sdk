@@ -86,6 +86,14 @@ Init onClan SDK on onCreate function of Activity, for example:
 		OnClanSDK onClanSDK = OnClanSDK.getInstance().initialize(this);
 	}
 
+You will also have to destroy the SDK when exit application, add this on onDestroy method of Activity:
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		onClanSDK.destroy();
+	}
+
 ## 2. SDK functions
 To post your score to onClan leaderboard, use the following function:
 
