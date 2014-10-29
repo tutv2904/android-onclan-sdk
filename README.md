@@ -32,7 +32,7 @@ import onClan SDK project to your IDE
     
 - Declare SDK Activities:
 
-  <activity android:name="com.onclan.android.home.LoginActivity" >
+        <activity android:name="com.onclan.android.home.LoginActivity" >
             <intent-filter>
                 <action android:name="com.onclan.android.sdk.login" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -41,7 +41,6 @@ import onClan SDK project to your IDE
                     android:scheme="onclan" />
             </intent-filter>
         </activity>
-        
         <activity
             android:name="com.appota.facebook.LoginActivity"
             android:label="@string/app_name"
@@ -57,7 +56,7 @@ If you want to use onClan chat feature, declare this:
 
 Add these keys to your plist file:
 
-    <meta-data
+        <meta-data
             android:name="com.appota.apiKey"
             android:value="YOUR API KEY GOT FROM ONCLAN DEVELOPERS" />
         <meta-data
@@ -66,7 +65,6 @@ Add these keys to your plist file:
         <meta-data
             android:name="onClanGameId"
             android:value="YOUR ONCLAN GAME ID GOT FROM ONCLAN DEVELOPERS" />
-
         <meta-data
             android:name="com.appota.twitter.consumer.key"
             android:value="YOUR TWITTER CONSUMER KEY" />
