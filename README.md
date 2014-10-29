@@ -15,7 +15,7 @@ import onClan SDK project to your IDE
 
 ## 3. Config your AndroidManifest.xml file
 
-- onClan SDK will require these permission to run:
+- onClan SDK will require these permissions to run:
 
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.WRITE_SETTINGS" />
@@ -73,23 +73,17 @@ Add these keys to your plist file:
             android:name="com.appota.twitter.consumer.secret"
             android:value="YOUR TWITTER CONSUMER SECRET" />
 
-![add](https://github.com/appota/ios-onclan-sdk/blob/master/images/sc2.png)
+<!--![add](https://github.com/appota/ios-onclan-sdk/blob/master/images/sc2.png)-->
 
 # II. Using onClanSDK
-## 1. Setting
-Open up your AppDelegate.m file and add the following import to the top of the file:
-
-`#import <OnClanSDK/OCSDK.h>`
-
-To show onClan floating button on your app, paste the following inside the application:didFinishLaunchingWithOptions: function:
-
-`[OCSDKConfigure configWithAPIKey:YOUR_APP_API_KEY];`
-
-Add the following inside function application: openURL: sourceApplication: annotation: to handle onClan login & onClan communication
-
-`- (BOOL) application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {`
-`return [OCSDKConfigure handleOpenURL:url sourceApplication:sourceApplication annotation:annotation];`
-`}`
+## 1. Init SDK
+Init onClan SDK on onCreate function of Activity, for example:
+        @Override
+	protected void onCreate(Bundle arg0) {
+		super.onCreate(arg0);
+		setContentView(R.layout.activity_sample);
+		onClanSDK = OnClanSDK.getInstance().initialize(this);
+	}
 
 ## 2. SDK functions
 To post your score to onClan leaderboard, use the following function:
