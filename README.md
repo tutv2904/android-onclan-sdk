@@ -79,11 +79,11 @@ Add these keys to your plist file:
 ## 1. Init SDK
 Init onClan SDK on onCreate function of Activity, for example:
 
-        @Override
-	protected void onCreate(Bundle arg0) {
-		super.onCreate(arg0);
+    @Override
+	protected void onCreate(Bundle savedInstance) {
+		super.onCreate(savedInstance);
 		setContentView(R.layout.activity_sample);
-		onClanSDK = OnClanSDK.getInstance().initialize(this);
+		OnClanSDK onClanSDK = OnClanSDK.getInstance().initialize(this);
 	}
 
 ## 2. SDK functions
