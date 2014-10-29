@@ -95,23 +95,3 @@ You will also have to destroy the SDK when exit application, add this on onDestr
 	}
 
 ## 2. SDK functions
-To post your score to onClan leaderboard, use the following function:
-
-[OCSDKLeaderboard submitScore:USER_SCORE];
-
-If you have many leaderboard categories in your game, such as Best score, best timing... you can pass your LEADERBOARD_ID to the second parameter:
-
-[OCSDKLeaderboard submitScore:USER_SCORE inCategory:LEADERBOARD_ID];
-
-By default, LEADERBOARD_ID = 1 if you have only 1 category. You can create leaderboard at http://developer.appota.com
-
-To show onClan leaderboard, using following function:
-
-[OCSDKConfigure showLeaderBoard];
-
-To show onClan user profile, using following function:
-[OCSDKConfigure showUser];
-
-To show Chat, using following function:
-
-[OCSDKConfigure showChat];
