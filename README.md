@@ -55,7 +55,7 @@ If you want to use onClan chat feature, declare this:
 
     <service android:name="com.onclan.android.chat.mqtt.ChatService" />
 
-Add these keys to your plist file:
+Add these keys inside <application>
 
         <meta-data
             android:name="com.appota.apiKey"
