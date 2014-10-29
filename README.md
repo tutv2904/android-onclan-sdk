@@ -9,62 +9,70 @@ For more information, visit http://developer.appota.com
 
 ## 1. Download & unzip the SDK
 
-Make sure you are using the latest version of XCode (6.0+) and targeting iOS 5.1.1 or higher
-
 ## 2. Add the SDK to your project
 
-Drag onClanSDK.framework, OnClanBundle.bundle, libssl.a, libcrypto.a to your Xcode project folder target.
+import onClan SDK project to your IDE
 
-Make sure the "Copy items to destination's group folder" checkbox is checked.
+## 3. Config your AndroidManifest.xml file
 
-![add](https://github.com/appota/ios-onclan-sdk/blob/master/images/sc1.png)
+- onClan SDK will require these permission to run:
 
-## 3. Add dependencies
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+- Declare SDK Activities:
 
-Click on Targets → Your app name → and then the 'Build Phases' tab.
-Expand 'Link Binary With Libraries' as shown.
+  <activity android:name="com.onclan.android.home.LoginActivity" >
+            <intent-filter>
+                <action android:name="com.onclan.android.sdk.login" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:host="sdk"
+                    android:scheme="onclan" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="com.appota.facebook.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.onclan.android.core.OnClanActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        
+If you want to use onClan chat feature, declare this:
+  <service android:name="com.onclan.android.chat.mqtt.ChatService" />
 
-![add](https://github.com/appota/ios-onclan-sdk/blob/master/images/sc3.png)
-
-Click the + button in the bottom left of the 'Link Binary With Libraries' section and add the following libraries:
-
-Twitter.framework, 
-Social.framework (optional), 
-ImageIO.framework, 
-StoreKit.framework, 
-CoreGraphics.framework, 
-Mapkit.framework, 
-Accounts.framework (optional), 
-CoreMedia.framework, 
-Foundation.framework, 
-CFNetwork.framework, 
-SystemConfiguration.framework, 
-Security.framework, 
-AVFoundation.framework, 
-AssetLibrary.framework, 
-libsqlite3.dylib
-
-For social login, add those framework to your project:
-
-FacebookSDK.framework, 
-GoogleOpenSource.framework, 
-GooglePlus.bundle, 
-GooglePlus.framework
-
-## 4. Config your plist file
 Add these keys to your plist file:
 
-- AppotaClientId (Get Appota client ID from http://developer.appota.com) 
-- FacebookAppID use your Facebook Application ID
-- GOOGLE_CLIENT_ID use your Google Client ID
-- TWITTER_CONSUMER_KEY
-- TWITTER_CONSUMER_SECRET
+    <meta-data
+            android:name="com.appota.apiKey"
+            android:value="YOUR API KEY GOT FROM ONCLAN DEVELOPERS" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="YOUR FACEBOOK APP ID" />
+        <meta-data
+            android:name="onClanGameId"
+            android:value="YOUR ONCLAN GAME ID GOT FROM ONCLAN DEVELOPERS" />
 
-Add url schemes key:
-
-- appotaYOUR_CLIENT_ID											
-- your_bundle_id (Use your bundle ID as scheme url for Google login SDK)
-- fbYOUR_FACEBOOK_APPID
+        <meta-data
+            android:name="com.appota.twitter.consumer.key"
+            android:value="YOUR TWITTER CONSUMER KEY" />
+        <meta-data
+            android:name="com.appota.twitter.consumer.secret"
+            android:value="YOUR TWITTER CONSUMER SECRET" />
 
 ![add](https://github.com/appota/ios-onclan-sdk/blob/master/images/sc2.png)
 
