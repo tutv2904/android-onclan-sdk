@@ -80,29 +80,31 @@ Add these keys inside "application" tag
 # II. Using onClanSDK
 ## 1. Init SDK
 Declare OnClanSDK as a global variable
+
   OnClanSDK onClanSDK;
+  
 Add this inside onCreate method of Activity
+
   onClanSDK = OnClanSDK.getInstance();
 Init onClanSDK after successfully logged in with AppotaGameSDK
+
   private class MyReceiver extends AppotaReceiver {
 
 		@Override
 		public void onLoginSuccess(AppotaUser user) {
-			// do verify login with your server now
-			//Toast.makeText(MainActivity.this, "Just for login testing. Username = " + user.username + ", AccessToken= " + user.accessToken, Toast.LENGTH_SHORT).show();
+			//init onClanSDK after login success
 			onClanSDK.initOnClanSDK(MainActivity.this, user.getOnClanUser());
 		}
 
 		@Override
 		public void onLogoutSuccess() {
+			//logout onClan after logout success
 			onClanSDK.logoutOnClan();
 		}
 
 		@Override
 		public void onSwitchAccountSuccess(AppotaUser user) {
-			// Toast.makeText(MainActivity.this,
-			// "Just for switch testing. Username = " + user.getUsername(),
-			// Toast.LENGTH_SHORT).show();
+
 		}
 
 		// payment success callback
