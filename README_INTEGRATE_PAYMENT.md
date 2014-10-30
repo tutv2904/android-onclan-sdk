@@ -81,14 +81,15 @@ Add these keys inside "application" tag
 ## 1. Init SDK
 Declare OnClanSDK as a global variable
 
-  OnClanSDK onClanSDK;
+  	OnClanSDK onClanSDK;
   
 Add this inside onCreate method of Activity
 
-  onClanSDK = OnClanSDK.getInstance();
+  	onClanSDK = OnClanSDK.getInstance();
+  	
 Init onClanSDK after successfully logged in with AppotaGameSDK
 
-  private class MyReceiver extends AppotaReceiver {
+  	private class MyReceiver extends AppotaReceiver {
 
 		@Override
 		public void onLoginSuccess(AppotaUser user) {
