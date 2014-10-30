@@ -120,3 +120,11 @@ Init onClanSDK after successfully logged in with AppotaGameSDK
 			
 		}
 	}
+
+You will also have to destroy the SDK when exit application, add this on onDestroy method of Activity:
+
+	@Override
+	protected void onDestroy() {
+		super.onDestroy();
+		onClanSDK.destroy();
+	}
