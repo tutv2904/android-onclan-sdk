@@ -105,3 +105,7 @@ You will also have to destroy the SDK when exit application, add this on onDestr
 	}
 
 ## 2. SDK functions
+
+
+For more details see sample code
+	https://github.com/appota/android-onclan-sdk/tree/master/sample
