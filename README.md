@@ -11,7 +11,13 @@ For more information, visit http://developer.appota.com
 
 ## 2. Add the SDK to your project
 
-import onClan SDK project to your IDE
+import onClan SDK project to your IDE, the SDK project just contains libs folder, other folders are unused
+
+![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/import.png)
+
+reference your project to onClanSDK project
+
+![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/reference.png)
 
 ## 3. Config your AndroidManifest.xml file
 
