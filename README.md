@@ -13,6 +13,12 @@ For more information, visit http://developer.appota.com
 
 import onClan SDK project to your IDE
 
+![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/import.png)
+
+reference your project to onClanSDK project
+
+![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/reference.png)
+
 ## 3. Config your AndroidManifest.xml file
 
 - onClan SDK will require these permissions to run:
