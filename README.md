@@ -27,6 +27,7 @@ reference your project to onClanSDK project
 
 - onClan SDK will require these permissions to run:
 
+``` xml
         <uses-permission android:name="android.permission.INTERNET" />
         <uses-permission android:name="android.permission.WRITE_SETTINGS" />
         <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -39,9 +40,10 @@ reference your project to onClanSDK project
         <uses-permission android:name="android.permission.WAKE_LOCK" />
         <uses-permission android:name="android.permission.RECORD_AUDIO" />
         <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-    
+```
 - Declare SDK Activities:
 
+``` xml
         <activity android:name="com.onclan.android.home.LoginActivity" >
             <intent-filter>
                 <action android:name="com.onclan.android.sdk.login" />
@@ -60,13 +62,13 @@ reference your project to onClanSDK project
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
-        
+```        
 If you want to use onClan chat feature, declare this:
-
+``` xml
     <service android:name="com.onclan.android.chat.mqtt.ChatService" />
-
-Add these keys inside "application" tag
-
+```
+Add these keys inside "```xml<application>```" tag
+``` xml
         <meta-data
             android:name="com.appota.apiKey"
             android:value="YOUR API KEY GOT FROM ONCLAN DEVELOPERS" />
@@ -82,13 +84,12 @@ Add these keys inside "application" tag
         <meta-data
             android:name="com.appota.twitter.consumer.secret"
             android:value="YOUR TWITTER CONSUMER SECRET" />
-
-<!--![add](https://github.com/appota/ios-onclan-sdk/blob/master/images/sc2.png)-->
+```
 
 # II. Using onClanSDK
 ## 1. Init SDK
 Init onClan SDK on onCreate function of Activity, for example:
-
+``` java
     @Override
 	protected void onCreate(Bundle savedInstance) {
 		super.onCreate(savedInstance);
@@ -97,28 +98,28 @@ Init onClan SDK on onCreate function of Activity, for example:
 		String[] onClanFeatures = new String[] {OnClanSubType.TYPE_CHAT, OnClanSubType.TYPE_LEADERBOARD};
 		OnClanSDK onClanSDK = OnClanSDK.getInstance().initialize(this, onClanFeatures);
 	}
-
+```
 You will also have to destroy the SDK when exit application, add this on onDestroy method of Activity:
-
+``` java
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
 		onClanSDK.destroy();
 	}
-
+```
 ## 2. SDK functions
 
 To immediately show chat screen, call:
-
+``` java
 	onClanSDK.showChat();
-	
+```	
 To show leaderboard, call:
-
+``` java
 	onClanSDK.showLeaderBoard();
-	
+```	
 To show main sdk screen, call:
-
+``` java
 	onClanSDK.showHome();
-
+```
 For more details see sample code
 	https://github.com/appota/android-onclan-sdk/tree/master/sample
