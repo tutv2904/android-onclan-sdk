@@ -13,7 +13,7 @@ import onClan SDK project to your IDE, the SDK project just contains libs folder
 
 reference your project to onClanSDK project
 
-![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/reference.png)
+![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/reference2.png)
 
 ## 3. Config your AndroidManifest.xml file
 
@@ -99,7 +99,9 @@ Init onClanSDK after successfully logged in with AppotaGameSDK
 		@Override
 		public void onLoginSuccess(AppotaUser user) {
 			//init onClanSDK after login success
-			onClanSDK.initOnClanSDK(MainActivity.this, user.getOnClanUser());
+			///To configure which feature of onClanSDK will be use in your app, game. Currenty the SDK support 2 feature to configure: Chat and Leaderboard
+			String[] onClanFeatures = new String[] {OnClanSubType.TYPE_CHAT, OnClanSubType.TYPE_LEADERBOARD};
+			onClanSDK.initOnClanSDK(MainActivity.this, onClanFeatures, user.getOnClanUser());
 		}
 
 		@Override
@@ -133,3 +135,20 @@ You will also have to destroy the SDK when exit application, add this on onDestr
 		super.onDestroy();
 		onClanSDK.destroy();
 	}
+
+## 2. SDK functions	
+	
+To immediately show chat screen, call:
+
+	onClanSDK.showChat();
+	
+To show leaderboard, call:
+
+	onClanSDK.showLeaderBoard();
+	
+To show main sdk screen, call:
+
+	onClanSDK.showHome();
+
+For more details see sample code
+	https://github.com/appota/android-onclan-sdk/tree/master/sample
