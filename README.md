@@ -55,7 +55,7 @@ If you want to use onClan chat feature, declare this:
 
     <service android:name="com.onclan.android.chat.mqtt.ChatService" />
 
-Add these keys inside '<application>' tag
+Add these keys inside "application" tag
 
         <meta-data
             android:name="com.appota.apiKey"
@@ -64,7 +64,7 @@ Add these keys inside '<application>' tag
             android:name="com.facebook.sdk.ApplicationId"
             android:value="YOUR FACEBOOK APP ID" />
         <meta-data
-            android:name="onClanGameId"
+            android:name="com.onclan.gameId"
             android:value="YOUR ONCLAN GAME ID GOT FROM ONCLAN DEVELOPERS" />
         <meta-data
             android:name="com.appota.twitter.consumer.key"
