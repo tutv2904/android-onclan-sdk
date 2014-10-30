@@ -1,4 +1,4 @@
-# First you need to update AppotaGameSDK to the lastest version here 
+# First you need to update AppotaGameSDK to the latest version here 
 https://github.com/appota/android-game-sdk
 
 # I. Install SDK
