@@ -151,4 +151,4 @@ To show main sdk screen, call:
 	onClanSDK.showHome();
 
 For more details see sample code
-	https://github.com/appota/android-onclan-sdk/tree/master/sample
+	https://github.com/appota/android-onclan-sdk/tree/master/sample_payment
