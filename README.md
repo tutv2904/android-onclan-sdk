@@ -107,12 +107,15 @@ You will also have to destroy the SDK when exit application, add this on onDestr
 ## 2. SDK functions
 
 To immediately show chat screen, call:
+
 	onClanSDK.showChat();
 	
 To show leaderboard, call:
+
 	onClanSDK.showLeaderBoard();
 	
 To show main sdk screen, call:
+
 	onClanSDK.showHome();
 
 For more details see sample code
