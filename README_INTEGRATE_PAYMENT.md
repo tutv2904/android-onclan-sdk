@@ -1,13 +1,13 @@
 # First you need to update AppotaGameSDK to the latest version here 
 https://github.com/appota/android-game-sdk
 
-# I. Install SDK
+# I. Install onClanSDK
 
-## 1. Download & unzip the SDK
+## 1. Download & unzip onClanSDK
 
-## 2. Add the SDK to your project
+## 2. Add onClanSDK to your project
 
-import onClan SDK project to your IDE, the SDK project just contains libs folder, other folders are unused
+import onClanSDK project to your IDE, the SDK project just contains libs folder, other folders are unused
 
 ![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/import.png)
 
