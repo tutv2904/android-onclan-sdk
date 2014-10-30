@@ -93,7 +93,9 @@ Init onClan SDK on onCreate function of Activity, for example:
 	protected void onCreate(Bundle savedInstance) {
 		super.onCreate(savedInstance);
 		setContentView(R.layout.activity_sample);
-		OnClanSDK onClanSDK = OnClanSDK.getInstance().initialize(this);
+		//To configure which feature of onClanSDK will be use in your app, game. Currenty the SDK support 2 feature to configure: Chat and Leaderboard
+		String[] onClanFeatures = new String[] {OnClanSubType.TYPE_CHAT, OnClanSubType.TYPE_LEADERBOARD};
+		OnClanSDK onClanSDK = OnClanSDK.getInstance().initialize(this, onClanFeatures);
 	}
 
 You will also have to destroy the SDK when exit application, add this on onDestroy method of Activity:
