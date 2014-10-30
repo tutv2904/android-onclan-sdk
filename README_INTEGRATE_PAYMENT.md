@@ -17,7 +17,7 @@ reference your project to onClanSDK project
 
 ## 3. Config your AndroidManifest.xml file
 
-- onClan SDK will require these permissions to run:
+- GameSDK and onClan SDK will require these permissions to run:
 
 	    <!-- game SDK -->
 	    <uses-permission android:name="android.permission.INTERNET" />
@@ -37,7 +37,7 @@ reference your project to onClanSDK project
 	    <!-- use this for google payment -->
 	    <uses-permission android:name="com.android.vending.BILLING" />
     
-- Declare SDK Activities:
+- Declare additional onClanSDK Activities:
 
         <activity android:name="com.onclan.android.home.LoginActivity" >
             <intent-filter>
