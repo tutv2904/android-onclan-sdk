@@ -67,7 +67,7 @@ If you want to use onClan chat feature, declare this:
 ``` xml
     <service android:name="com.onclan.android.chat.mqtt.ChatService" />
 ```
-Add these keys inside "```xml<application>```" tag
+Add these keys inside ```<application>``` tag
 ``` xml
         <meta-data
             android:name="com.appota.apiKey"
