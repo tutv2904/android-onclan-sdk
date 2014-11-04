@@ -8,8 +8,22 @@
     <Button 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TEst"
+        android:text="Show Home"
         android:layout_gravity="right|center_vertical"
-        android:onClick="test"/>
+        android:onClick="showHome"/>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Chat"
+        android:layout_gravity="left|center_vertical"
+        android:onClick="showChat"/>
+    
+    <Button 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Leaderboard"
+        android:layout_gravity="center_horizontal|bottom"
+        android:onClick="showLeaderboard"/>
     
 </LinearLayout>
