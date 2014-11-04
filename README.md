@@ -11,11 +11,13 @@ If you had integrated AppotaGameSDK before, see https://github.com/appota/androi
 
 # I. Install SDK
 
-## 1. Download & unzip the SDK
+## 1. Download
+
+Download the onClanSDK jar file in onClanSDKLibrary folder
 
 ## 2. Add the SDK to your project
 
-import onClan SDK project to your IDE, the SDK project just contains libs folder, other folders are unused
+Add the downloaded jar file to libs folder in your project
 
 ![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/import.png)
 
