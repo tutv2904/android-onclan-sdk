@@ -19,11 +19,7 @@ Download the onClanSDK jar file in https://github.com/appota/android-onclan-sdk/
 
 Add the downloaded jar file to libs folder in your project
 
-![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/import.png)
-
-reference your project to onClanSDK project
-
-![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/reference.png)
+![add](https://github.com/appota/android-onclan-sdk/blob/master/docs/import2.png)
 
 ## 3. Config your AndroidManifest.xml file
 
