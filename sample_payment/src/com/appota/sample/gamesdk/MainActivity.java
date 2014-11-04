@@ -124,15 +124,13 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onSwitchAccountSuccess(AppotaSession user) {
-			// Toast.makeText(MainActivity.this,
-			// "Just for switch testing. Username = " + user.getUsername(),
-			// Toast.LENGTH_SHORT).show();
+			onClanSDK.switchAccount(user.getOnClanUser());
 		}
 
 		// payment success callback
 		@Override
 		public void onPaymentSuccess(TransactionResult paymentResult) {
-			onClanSDK.switchAccount(user.getOnClanUser());
+			
 		}
 
 		@Override
