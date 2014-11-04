@@ -111,7 +111,8 @@ Init onClanSDK after successfully logged in with AppotaGameSDK
 
 		@Override
 		public void onSwitchAccountSuccess(AppotaUser user) {
-
+			//switch account
+			onClanSDK.switchAccount(user.getOnClanUser());
 		}
 
 		// payment success callback
