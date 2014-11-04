@@ -132,7 +132,7 @@ public class MainActivity extends Activity {
 		// payment success callback
 		@Override
 		public void onPaymentSuccess(TransactionResult paymentResult) {
-
+			onClanSDK.switchAccount(user.getOnClanUser());
 		}
 
 		@Override
