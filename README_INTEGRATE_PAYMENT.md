@@ -52,9 +52,10 @@ reference your project to onClanSDK project
             android:name="com.appota.facebook.LoginActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            
+        <!--NOTICE: android:screenOrientation is depends on your game orientation. So feel free to set it landscape or portrait-->
         <activity
             android:name="com.onclan.android.core.OnClanActivity"
-            <!--this depends on your game, which is landscape or portrait-->
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
