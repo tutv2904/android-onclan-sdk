@@ -55,6 +55,8 @@ Add the downloaded jar file to libs folder in your project
             android:name="com.appota.facebook.LoginActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            
+            <!--NOTICE: android:screenOrientation is depends on your game orientation. So feel free to set it landscape or portrait-->
         <activity
             android:name="com.onclan.android.core.OnClanActivity"
             android:screenOrientation="landscape"
