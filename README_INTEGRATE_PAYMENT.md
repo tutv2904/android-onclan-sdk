@@ -54,6 +54,7 @@ reference your project to onClanSDK project
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
         <activity
             android:name="com.onclan.android.core.OnClanActivity"
+            <!--this depends on your game, which is landscape or portrait-->
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
