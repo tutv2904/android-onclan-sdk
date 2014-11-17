@@ -52,6 +52,8 @@ reference your project to onClanSDK project
             android:name="com.appota.facebook.LoginActivity"
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            
+        <!--NOTICE: android:screenOrientation is depends on your game orientation. So feel free to set it landscape or portrait-->
         <activity
             android:name="com.onclan.android.core.OnClanActivity"
             android:screenOrientation="landscape"
@@ -101,6 +103,8 @@ Init onClanSDK after successfully logged in with AppotaGameSDK
 			///To configure which feature of onClanSDK will be use in your app, game. Currenty the SDK support 2 feature to configure: Chat and Leaderboard
 			String[] onClanFeatures = new String[] {OnClanSubType.TYPE_CHAT, OnClanSubType.TYPE_LEADERBOARD};
 			onClanSDK.initOnClanSDK(MainActivity.this, onClanFeatures, user.getOnClanUser());
+			//if you want to disable logout in onClanSDK, add this
+        onClanSDK.enableLogout(false);
 		}
 
 		@Override
