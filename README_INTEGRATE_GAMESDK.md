@@ -55,6 +55,7 @@ reference your project to onClanSDK project
             
         <activity
             android:name="com.onclan.android.core.OnClanActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
 ```        
