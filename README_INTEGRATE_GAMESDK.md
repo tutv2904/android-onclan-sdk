@@ -53,10 +53,8 @@ reference your project to onClanSDK project
             android:label="@string/app_name"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
             
-        <!--NOTICE: android:screenOrientation is depends on your game orientation. So feel free to set it landscape or portrait-->
         <activity
             android:name="com.onclan.android.core.OnClanActivity"
-            android:screenOrientation="landscape"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
 ```        
@@ -72,9 +70,6 @@ Add these keys inside ```<application>``` tag
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="YOUR FACEBOOK APP ID" />
-        <meta-data
-            android:name="com.onclan.gameId"
-            android:value="YOUR ONCLAN GAME ID GOT FROM ONCLAN DEVELOPERS" />
         <meta-data
             android:name="com.appota.twitter.consumer.key"
             android:value="YOUR TWITTER CONSUMER KEY" />
