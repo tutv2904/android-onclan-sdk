@@ -74,6 +74,10 @@ Add these keys inside ```<application>``` tag
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="YOUR FACEBOOK APP ID" />
+        <!--optional-->
+        <meta-data
+            android:name="com.onclan.gameId"
+            android:value="YOUR ONCLAN GAMEID GOT FROM ONCLAN DEVELOPERS" />
         <meta-data
             android:name="com.appota.twitter.consumer.key"
             android:value="YOUR TWITTER CONSUMER KEY" />
