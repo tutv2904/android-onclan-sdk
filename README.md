@@ -123,5 +123,26 @@ To show main sdk screen, call:
 ``` java
 	onClanSDK.showHome();
 ```
+
+To show onClan floating button manually, call:
+``` java
+	onClanSDK.showOnClanButton();
+```
+
+To hide onClan floating button manually, call:
+``` java
+	onClanSDK.hideOnClanButton();
+```
+
+To set onClan floating button draggable, call:
+``` java
+	onClanSDK.setOnClanButtonDraggable(boolean draggable);
+```
+
+To set onClan floating button at fixed position (onClanButton must be undraggable using setDraggable function aboce), call:
+``` java
+	onClanSDK.setOnClanButtonPosition(int posX, int posY);
+```
+
 For more details see sample code
 	https://github.com/appota/android-onclan-sdk/tree/master/sample
