@@ -5,7 +5,7 @@ For more information, visit http://developer.appota.com
 
 =====================
 
-If you had integrated AppotaGameSDK before, see https://github.com/appota/android-onclan-sdk/blob/master/README_INTEGRATE_PAYMENT.md for guide to integrate both AppotaGameSDK and onClanSDK
+If you had integrated AppotaGameSDK before, see https://github.com/appota/android-onclan-sdk/blob/master/README_INTEGRATE_GAMESDK.md for guide to integrate both AppotaGameSDK and onClanSDK
 
 =====================
 
