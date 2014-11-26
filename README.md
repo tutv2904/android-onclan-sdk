@@ -139,8 +139,10 @@ To set onClan floating button draggable, call:
 	onClanSDK.setOnClanButtonDraggable(boolean draggable);
 ```
 
-To set onClan floating button at fixed position (onClanButton must be undraggable using setDraggable function aboce), call:
+To set onClan floating button at fixed position (onClanButton must be undraggable using setDraggable function above), call:
 ``` java
+	//onClan button must be undraggable first
+	onClanSDK.setOnClanButtonDraggable(false);
 	onClanSDK.setOnClanButtonPosition(int posX, int posY);
 ```
 
