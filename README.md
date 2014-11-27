@@ -5,7 +5,7 @@ For more information, visit http://developer.appota.com
 
 =====================
 
-If you had integrated AppotaGameSDK before, see https://github.com/appota/android-onclan-sdk/blob/master/README_INTEGRATE_PAYMENT.md for guide to integrate both AppotaGameSDK and onClanSDK
+If you had integrated AppotaGameSDK before, see https://github.com/appota/android-onclan-sdk/blob/master/README_INTEGRATE_GAMESDK.md for guide to integrate both AppotaGameSDK and onClanSDK
 
 =====================
 
@@ -123,5 +123,28 @@ To show main sdk screen, call:
 ``` java
 	onClanSDK.showHome();
 ```
+
+To show onClan floating button manually, call:
+``` java
+	onClanSDK.showOnClanButton();
+```
+
+To hide onClan floating button manually, call:
+``` java
+	onClanSDK.hideOnClanButton();
+```
+
+To set onClan floating button draggable, call:
+``` java
+	onClanSDK.setOnClanButtonDraggable(boolean draggable);
+```
+
+To set onClan floating button at fixed position (onClanButton must be undraggable using setDraggable function above), call:
+``` java
+	//onClan button must be undraggable first
+	onClanSDK.setOnClanButtonDraggable(false);
+	onClanSDK.setOnClanButtonPosition(int posX, int posY);
+```
+
 For more details see sample code
 	https://github.com/appota/android-onclan-sdk/tree/master/sample
