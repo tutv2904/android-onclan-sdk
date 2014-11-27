@@ -177,5 +177,13 @@ To set onClan floating button at fixed position (onClanButton must be undraggabl
 	onClanSDK.setOnClanButtonPosition(int posX, int posY);
 ```
 
+To get user friend list, call:
+``` java
+	onClanSDK.getFriendList(int limit, String cursor, OnClanFriendListCallback callback);
+	//limit: number of user each request
+	//cursor: next request token to get continuous friends. Cursor is returned from previous request
+	//callback: callback to get friend list data (JSON format)
+```
+
 For more details see sample code
 	https://github.com/appota/android-onclan-sdk/tree/master/sample_payment
