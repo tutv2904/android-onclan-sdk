@@ -177,6 +177,11 @@ To set onClan floating button at fixed position (onClanButton must be undraggabl
 	onClanSDK.setOnClanButtonPosition(int posX, int posY);
 ```
 
+To get user info, call:
+``` java
+	onClanSDK.getUserInfo(OnClanUserInfoCallback callback);
+```
+
 To get user friend list, call:
 ``` java
 	onClanSDK.getFriendList(int limit, String cursor, OnClanFriendListCallback callback);
